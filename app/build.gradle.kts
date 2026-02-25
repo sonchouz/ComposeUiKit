@@ -6,7 +6,7 @@ plugins {
 android {
     namespace = "com.example.composeuikit"
     compileSdk {
-        version = release(36)
+        version = release(35)
     }
 
     defaultConfig {
@@ -37,6 +37,26 @@ android {
 }
 
 dependencies {
+    val bom = platform("androidx.compose:compose-bom:2024.10.00")
+    implementation(bom)
+
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.material3:material3")
+
+    // Preview аннотация
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+    // Если используешь rememberSaveable:
+    implementation("androidx.compose.runtime:runtime-saveable")
+
+    // Если используешь detectTapGestures/pointerInput:
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.foundation:foundation")
+
+    // Для debug-превью (не обязательно, но полезно)
+    debugImplementation("androidx.compose.ui:ui-tooling")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -46,6 +66,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(project(":uikit"))
+    implementation("androidx.compose.material:material-icons-extended")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     testImplementation(libs.junit)
