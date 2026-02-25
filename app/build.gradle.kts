@@ -6,11 +6,11 @@ plugins {
 android {
     namespace = "com.example.composeuikit"
     compileSdk {
-        version = release(35)
+        version = release(36)
     }
 
     defaultConfig {
-        minSdk = 28
+        minSdk = 36
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -65,7 +65,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(project(":uikit"))
+
     implementation("androidx.compose.material:material-icons-extended")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

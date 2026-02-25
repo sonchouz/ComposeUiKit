@@ -1,2 +1,4 @@
 jdk:
   - openjdk17
+install:
+  - ./gradlew :uikit:clean :uikit:publishToMavenLocal -x test
