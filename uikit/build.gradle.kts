@@ -41,8 +41,8 @@ afterEvaluate {
                 from(components["release"])
 
                 groupId = "com.github.sonchouz"
-                artifactId = "СomposeUiKit"
-                version = "1.0.2" // JitPack подставит тег, но пусть будет
+                artifactId = "ComposeUiKit"
+                version = "1.0.4" // JitPack подставит тег, но пусть будет
             }
         }
     }
