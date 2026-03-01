@@ -194,7 +194,7 @@ fun TextInputPreview() {
             }
 
             FieldUiState.Error -> {
-                text = "Ввдите имя"
+                text = "Введите имя"
                 errorText = "Введите ваше имя"
                 focusManager.clearFocus()
             }
