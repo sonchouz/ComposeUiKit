@@ -29,6 +29,9 @@ dependencies {
     implementation(libs.androidx.ui.text)
     implementation(libs.androidx.material3)
     implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.navigation.compose)
     debugImplementation(libs.ui.tooling)
 }
 
