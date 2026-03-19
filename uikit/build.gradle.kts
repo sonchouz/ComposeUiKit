@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    // ... твои android настройки
+
 
     publishing {
         singleVariant("release") {
             withSourcesJar()
-            // withJavadocJar() // если надо, но для Android часто не используют
+
         }
-        namespace = "com.example.uikit" // любое твоё
+        namespace = "com.example.uikit"
         compileSdk = 35
 
         defaultConfig {
@@ -40,12 +40,11 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                // В Kotlin DSL вот так:
                 from(components["release"])
 
                 groupId = "com.github.sonchouz"
                 artifactId = "ComposeUiKit"
-                version = "1.0.4" // JitPack подставит тег, но пусть будет
+                version = "1.0.4"
             }
         }
     }

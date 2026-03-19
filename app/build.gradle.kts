@@ -57,6 +57,7 @@ dependencies {
 
     // Для debug-превью (не обязательно, но полезно)
     debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("com.github.sonchouz:ComposeUiKit:v1.0.5")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
